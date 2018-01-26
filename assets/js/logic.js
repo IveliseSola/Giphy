@@ -24,21 +24,20 @@ $(document).ready(function () {
     });
 
     $("#addShow-btn").on("click", function(event) {
-
+        event.preventDefault();
         var getInput = $("#input-show").val().trim();
 
-        if (getInput) {
-            $(".message").empty();
-            topics.push(getInput);
-            createButtons();
-        } else {
-            event.preventDefault();
-            $(".message").html("<p> Please enter a Show Name </p>");
-        }
-        // event.preventDefault();
-        // topics.push(getInput);
-        // createButtons();
-    })
+        // if (getInput) {
+        //     $(".message").empty();
+        //     topics.push(getInput);
+        //     createButtons();
+        // } else {
+        //     event.preventDefault();
+        //     $(".message").html("<p> Please enter a Show Name </p>");
+        // }
+        topics.push(getInput);
+        createButtons();
+    });
 
     function createButtons() {
         $(".buttons-list").empty();
