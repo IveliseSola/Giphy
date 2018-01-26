@@ -1,0 +1,22 @@
+
+body {background-color: #55b973;}
+
+.buttons-list,
+.form-section{
+    background-color:  #357a44; 
+}
+
+.show-btn,
+#addShow-btn {
+    margin: 30px;
+    height: 25px;
+    color: #357a44; 
+}
+
+.form-section,
+.gifs-list{
+    margin-top: 40px;
+}
+
+.label-class{ margin-left: 30px;}
+
