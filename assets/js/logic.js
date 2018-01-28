@@ -1,7 +1,7 @@
 
 $(document).ready(function () {
 
-    var topics = ["Rick and Morty", "BoJack Horseman", "Bob's Burger", "Family Guy", "SpongeBob"];
+    var topics = ["Rick and Morty", "BoJack Horseman", "Bob's Burger", "Family Guy", "SpongeBob","Big Mouth"];
 
     createButtons();
 
@@ -12,7 +12,7 @@ $(document).ready(function () {
         displayGif(queryURL);
     });
 
-    $(document).on("click", ".gif", function () {
+    $(document.body).on("click", ".gif", function () {
         var state = $(this).attr("data_state");
         if (state === "still") {
             $(this).attr("src", $(this).attr("data_animate"));
@@ -23,20 +23,24 @@ $(document).ready(function () {
         }
     });
 
-    $("#addShow-btn").on("click", function(event) {
-        event.preventDefault();
+    $("#addShow-btn").on("click", function (event) {
+        event.preventDefault(); //this method isn't working as expected. 
         var getInput = $("#input-show").val().trim();
 
-        // if (getInput) {
+        /* this IF doesn't work as expected either, 
+        please let me known what I'm missing here */
+
+        // if (getInput) { 
         //     $(".message").empty();
         //     topics.push(getInput);
         //     createButtons();
         // } else {
-        //     event.preventDefault();
-        //     $(".message").html("<p> Please enter a Show Name </p>");
+        //     event.preventDefault(); 
+        //     $(".message").html("<p style=color:red;> Please enter a Show Name </p>");
         // }
         topics.push(getInput);
         createButtons();
+        $("#input-show").val(" ");
     });
 
     function createButtons() {
@@ -56,7 +60,7 @@ $(document).ready(function () {
             url: parameter,
             method: 'GET'
         }).done(function (response) {
-            // console.log(response);
+
             for (var i = 0; i < response.data.length; i++) {
                 var newImg = $("<img>");
                 newImg.attr({ src: response.data[i].images.fixed_height_still.url, "data_still": response.data[i].images.fixed_height_still.url, "data_animate": response.data[i].images.fixed_height.url, "data_state": "still" });

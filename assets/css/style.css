@@ -1,16 +1,20 @@
 
-body {background-color: #55b973;}
 
 .buttons-list,
 .form-section{
-    background-color:  #357a44; 
+    background-color:  #1d6d2a; 
+}
+
+.form-section{
+    width: 400px;
 }
 
 .show-btn,
 #addShow-btn {
     margin: 30px;
     height: 25px;
-    color: #357a44; 
+    border-radius: 3px;
+    color: #7ce693; 
 }
 
 .form-section,
@@ -18,5 +22,8 @@ body {background-color: #55b973;}
     margin-top: 40px;
 }
 
-.label-class{ margin-left: 30px;}
+.label-class{ 
+    margin-left: 30px;
+    color: #fff;
+}
 
