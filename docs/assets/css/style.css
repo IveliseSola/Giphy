@@ -1,0 +1,29 @@
+
+
+.buttons-list,
+.form-section{
+    background-color:  #1d6d2a; 
+}
+
+.form-section{
+    width: 400px;
+}
+
+.show-btn,
+#addShow-btn {
+    margin: 30px;
+    height: 25px;
+    border-radius: 3px;
+    color: #7ce693; 
+}
+
+.form-section,
+.gifs-list{
+    margin-top: 40px;
+}
+
+.label-class{ 
+    margin-left: 30px;
+    color: #fff;
+}
+
